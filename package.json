@@ -1,5 +1,5 @@
 {
-  "private": false,
+  "private": true,
   "name": "slate-editor-mini-project",
   "keywords": ["slate","slatejs","slate-edit-list","list-edit"],
   "workspaces": [
