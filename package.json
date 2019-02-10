@@ -2,6 +2,7 @@
   "private": true,
   "name": "slate-editor-mini-project",
   "keywords": ["slate","slatejs","slate-edit-list","list-edit"],
+  "homemepage": "https://mahmed0715.github.io/slate-editor-mini-project",
   "workspaces": [
     "packages/*"
   ],
@@ -96,6 +97,8 @@
     "build": "rollup --config ./support/rollup/config.js",
     "build:production": "cross-env NODE_ENV=production rollup --config ./support/rollup/config.js && cross-env NODE_ENV=production webpack --config support/webpack/config.js",
     "clean": "lerna run clean && rm -rf ./node_modules ./dist ./build",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "gh-pages": "gh-pages --dist ./build",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "lint:eslint": "eslint benchmark packages/*/src packages/*/test examples/*/*.js examples/dev/*/*.js",
